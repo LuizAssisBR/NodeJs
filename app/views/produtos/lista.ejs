@@ -1,0 +1,31 @@
+<html>
+    <read>
+        <title>Primeiro projeto em NodeJS</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    </read>
+    <body>
+        <table class="table table-striped">
+            <thead class="thead-inverse">
+            <tr>
+                <th>id</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>preço</th>
+            </tr>
+            </thead>
+            <tbody>
+            <%for(var i=0;i<lista.length;i++){%>
+                <tr>
+                    <td><%=lista[i].id%></td>
+                    <td><%=lista[i].titulo%></td>
+                    <td><%=lista[i].descricao%></td>
+                    <td><%=lista[i].preco%></td>
+                </tr>
+            <%}%>
+            </tbody>
+             
+        </table>
+        <a href="/produtos/form" class="btn btn-primary">Cadastar</a>
+    </body>
+</html>

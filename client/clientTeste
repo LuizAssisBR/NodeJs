@@ -1,0 +1,38 @@
+//biblioteca do nodejs
+var http = require('http');
+
+var config = {
+    hostname:'localhost',
+    port:3000,
+    path:'/produtos',
+    method: 'POST',
+    headers:{
+        'Accept':'application/json',//aceita como resposta do servidor
+        'Content-Type':'application/json'
+    }
+};
+
+// recupera informações
+// http.get(config,function(response){
+//     console.log(response.statusCode);
+//     response.on('data',function(body){
+//         console.log('Corpo' + body)
+//     });
+// });
+
+
+//enviado dados para o servidor via ajax
+var client =  http.request(config,function(response){
+      console.log(response.statusCode);
+      response.on('data',function(body){
+        console.log('body: ' + body);
+      });
+});
+
+var produto ={
+    titulo:'',
+    descricao: 'para profissionais da area de TI',
+    preco: 250
+};
+
+client.end(JSON.stringify(produto));

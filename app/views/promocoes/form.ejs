@@ -1,0 +1,37 @@
+<html>
+      <read>
+        <title>Primeiro projeto em NodeJS</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    </read>
+  
+        
+    <body>
+        <form method="POST" action="/promocoes">
+                 <div class="jumbotron">
+                     </div>   
+                 <div class="row">
+                    <div class="col-md-3">
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="descricao">Descrição da promoção</label>
+                            <input type="text" class="form-control" name="descricao">
+                        </div>
+                        <div class="form-group">
+                            <select name="livros[id]" class="form-control">
+                                 <%for(var i=0;i < lista.length;i++){%>
+                                    <option value="<%=lista[i].id%>"><%=lista[i].titulo%></option>
+                                <%}%>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                                <input type="submit" value="Cadastrar promoções" class="btn btn-primary"/> 
+                        </div>
+                    </div>
+                 </div>
+        </form>
+
+    </body>
+</html>
